@@ -1,0 +1,105 @@
+  <!-- Tramanh Best -->
+<!DOCTYPE html>
+<html>
+
+
+   <head>
+      <title>Cheesecake Page</title>
+      <link rel="stylesheet" href="stylesheets\CheesecakeOrderFormButBetter.css" />
+
+      <script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+
+      </script>
+   </head>
+
+
+   <body>
+      <h1>Cheesecake Order Form</h1>
+      <img src="Wiki_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake with mysterious red sauce" style="width: 300px;height: 300px;">
+      
+
+      <!-- orderDiv contains everything that disappears once cheesecake is successfully ordered -->
+   <div id="orderDiv">
+
+
+      <p> Quantity Topping</p>
+      <div class="container" style="float: left;">
+         <form action="/action_page.php">
+            <label for="Quantity"></label>
+            <select name="cakesNum" id="cakesNum">
+               <option value="3">3</option>
+               <option value="2">2</option>
+               <option value="1">1</option>
+            </select>
+         </form>
+      </div>
+
+
+      <div class="container" style="float: none; margin-left: 50px;">
+         <form id="toppingType" action="/action_page.php">
+              <input type="radio" id="Plain" name="flavour" value="Plain">
+              <label for="Plain">Plain</label><br>
+              <input type="radio" id="Cherry" name="flavour" value="Cherry">
+              <label for="Cherry">Cherry</label><br>
+              <input type="radio" id="Chocolate" name="flavour" value="Chocolate">
+              <label for="Chocolate">Chocolate</label>
+         </form>
+      </div>
+      
+
+      <p>Notes:</p>
+      <textarea name="NotesBox" id="NotesBox" style="color: gray; height: 70px; width: 400px;" >
+      Enter any special instructions here.
+      </textarea>
+
+      <br>
+      <br>
+      <button type="button" onclick="onOrder()">Order</button> 
+   </div>
+
+
+      <!-- text and drop down button for seeing orders for the selected month-->
+   <div class="totalOrdersLine">
+         <h2>Total Orders for</h2>
+         
+         <div class="dropdown">
+            
+           <button id="dropdownBtn" class="dropbtn"> Jan
+             <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-content">
+            <button onclick="changeMonth('Jan')">Jan</button>
+            <button onclick="changeMonth('Feb')">Feb</button>
+            <button onclick="changeMonth('Mar')">Mar</button>
+            <button onclick="changeMonth('Apr')">Apr</button>
+            <button onclick="changeMonth('May')">May</button>
+            <button onclick="changeMonth('Jun')">Jun</button>
+            <button onclick="changeMonth('Jul')">Jul</button>
+            <button onclick="changeMonth('Aug')">Aug</button>
+            <button onclick="changeMonth('Sep')">Sep</button>
+            <button onclick="changeMonth('Oct')">Oct</button>
+            <button onclick="changeMonth('Nov')">Nov</button>
+            <button onclick="changeMonth('Dec')">Dec</button>
+           </div>
+         </div>
+
+       </div>
+
+      <ul>
+         <li>11 cherry</li>
+         <li>17 chocolate</li>
+         <li>31 plain</li>
+      </ul>
+
+      <br>
+
+
+      <script src="javascripts/stuff.js">
+        
+
+      </script>
+
+
+   </body>
+</html>
